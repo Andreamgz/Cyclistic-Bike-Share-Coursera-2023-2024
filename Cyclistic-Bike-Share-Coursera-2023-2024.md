@@ -231,16 +231,16 @@ ggplot(alldataclean) +
   scale_fill_hue(labels = c("Casual","Member"))
 ```
 
-![2024  usertype vs month](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/e2bf625d-8ade-431f-8757-09c58d3adea5){width="600"}
+![2024  usertype vs month](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/e2bf625d-8ade-431f-8757-09c58d3adea5)
 
 
-![2019 USERTYPE VS MONTH](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/bd7b3eb5-4756-4d61-a021-b50b015cefbc){width="600"}
+![2019 USERTYPE VS MONTH](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/bd7b3eb5-4756-4d61-a021-b50b015cefbc)
 
 
 -   We can see that there has been an increase in casual users in some months such as January and February. But the summer months are still the important ones for the company.
 
 
-![USERTYPE VS DAYOFWEEK](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/1f00324a-5350-4942-9922-d8f395c496e8){width="600"}
+![USERTYPE VS DAYOFWEEK](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/1f00324a-5350-4942-9922-d8f395c496e8)
 
 
 -   We can also see how casual users differ from members by using the service on weekends.
