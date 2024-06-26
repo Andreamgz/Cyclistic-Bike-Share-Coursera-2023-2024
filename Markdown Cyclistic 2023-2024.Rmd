@@ -230,11 +230,11 @@ ggplot(alldataclean) +
   scale_fill_hue(labels = c("Casual","Member"))
 ```
 
-![](images/2019%20USERTYPE%20VS%20MONTH-01.png){width="600"}
+![](images/2019%20USERTYPE%20VS%20MONTH-01.png)
 
 -   We can see that there has been an increase in casual users in some months such as January and February. But the summer months are still the important ones for the company.
 
-![](images/USERTYPE%20VS%20DAYOFWEEK.png){width="600"}
+![](images/USERTYPE%20VS%20DAYOFWEEK.png)
 
 -   We can also see how casual users differ from members by using the service on weekends.
 -   Finally we can say that despite the years that have passed there is not a big difference in terms of dates of use of the service.
