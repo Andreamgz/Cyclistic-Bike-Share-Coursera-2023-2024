@@ -134,7 +134,35 @@ alldataclean <- alldataclean[!(alldataclean$start_station_name == "HQ QR" | alld
 
 # 4. ANALYZE
 
-We will start by analyzing the average distance that our two types of users make. In addition, we will calculate the number of rides they make in the week
+We will start by analyzing the amount of userstype are, and the average distance that our two types of users make. In addition, we will calculate the number of rides they make in the week
+
+## 2024 Members vs Casual
+
+```{r}
+temp = alldataclean %>% 
+  group_by(member_casual) %>% 
+  summarise(count = n())
+percentiles = geom_text(aes(label = paste0(round(count*100/sum(count),0), "%")), size=10, position = position_stack(vjust = 0.5))
+
+ggplot(temp, aes(x='', y=count, fill=member_casual)) + 
+  geom_bar(stat="identity", width=1, color='black') + facet_wrap(~member_casual) +
+  percentiles +
+  labs(title = "Percentage of Users")
+```
+
+
+
+  ![Percentage of users](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/ebd18c14-81fe-404e-9f7d-4fe4bfe19092)
+
+  
+
+| Member_Casual | Count     | 
+|---------------|-----------|
+| Casual        | 2061852   | 
+| Member        | 3680438   | 
+
+
+
 
 ## Average Distance and Number of Rides
 
@@ -174,7 +202,7 @@ membervsdistance <- ggplot(userType_means) +
     theme(legend.position="top")
 ```
 
-![Rides distance](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/b2cc1075-c60c-436f-8e11-e61351cefcc1)
+![Rides distance](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/f9d38804-004e-4a1a-8bdc-22dff1215853)
 
 
 -   After seeing the graphs we can say that members use the service daily as their main of transport. On the other hand, casual users use the service for leisure on weekends. Because of this, they spend more time with the bikes than the members, but in terms of kilometers, it is quite tight although it may be a data collection error.
@@ -231,7 +259,8 @@ ggplot(alldataclean) +
   scale_fill_hue(labels = c("Casual","Member"))
 ```
 
-![2024  usertype vs month](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/e2bf625d-8ade-431f-8757-09c58d3adea5)
+![2024  usertype vs month](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/c5d84751-fc2f-48ad-beb4-81fd26397ea9)
+
 
 
 ![2019 USERTYPE VS MONTH](https://github.com/Andreamgz/Cyclistic-Bike-Share-Coursera-2023-2024/assets/173884816/bd7b3eb5-4756-4d61-a021-b50b015cefbc)
@@ -245,6 +274,8 @@ ggplot(alldataclean) +
 
 -   We can also see how casual users differ from members by using the service on weekends.
 -   Finally we can say that despite the years that have passed there is not a big difference in terms of dates of use of the service.
+
+
 
 # 5.SHARE
 
